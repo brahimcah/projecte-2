@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?wb=2">
+            <a class="nav-link" href="perfil.php">
               <span data-feather="users" class="align-text-bottom"></span>
               Perfil
             </a>
