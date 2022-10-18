@@ -8,22 +8,9 @@
     <meta name="generator" content="Hugo 0.104.2">
     <title>Perroqueria Papesos</title>
 
+   
 
-    <?php
-    require_once "../Database/Database.php";
-
-    
-    $username = "demo";
-
-    $sql = "SELECT * FROM cites cit WHERE cit.username='".$username."';";
-    $result = $conn->query($sql);
-
-                   
-    ?>
-
-    
-
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <style>
       .bd-placeholder-img {
@@ -79,37 +66,74 @@
     </style>
 
             
-            <!-- Custom styles for this template -->
-            <link href="dashboard.css" rel="stylesheet">
-          </head>
-          <body>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
             
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-          <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Perroqueria Papesos</a>
-          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navbar-nav">
-            <div class="nav-item text-nowrap">
-              <a class="nav-link px-3" href="#">Sign out</a>
-            </div>
-          </div>
-        </header>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Perroqueria Papesos</a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="#">Sign out</a>
+        </div>
+      </div>
+    </header>    
 
 
-        <?php 
+    <?php 
 
-        include "menu.php"
+      include "menu.php"
 
-        ?>
+    ?>
 
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          <?php  include "con_cit.php" ?>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">DATA</th>
+                  <th scope="col">Tractament</th>
+                  <th scope="col">Estat</th>
+                  <th scope="col">Afegeix al calendari</th>
+                  <th scope="col">Modificar</th>
+                  <th scope="col">Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php   foreach($list as $entry) {?>
+                <tr>  
+                  <td> <?php echo $entry['date_cita'] ?> </td>
+                  <td> <?php echo $entry['tipo_cita'] ?> </td>
+                  <td> <?php echo $entry['nom'] ?> </td>
+                  
+                  <td> <a title="Exportar a l'Outlook" href="">
+                        <img width="30" src="../img/microsoft_office_outlook.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                      </a><b> - </b> <a title="Exportar en PDF" href="">
+                        <img width="30" src="../img/pdf.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                      </a></td>
+                  <td><a title="Exportar en PDF" href="">
+                        <img width="25" src="../img/pen.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                      </a></td>
+                  <td><a title="Exportar en PDF" href="">
+                        <img width="30" src="../img/bin.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                      </a></td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+        </div>  
+
         </main>
       </div>
     </div>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>
