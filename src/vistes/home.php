@@ -86,7 +86,7 @@
 
     <?php 
 
-      include "menu.php"
+      include "../src/vistes/menu.php"
 
     ?>
 

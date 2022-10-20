@@ -41,5 +41,12 @@ class Contenidor
     {
         return new \Emeset\Peticio();
     }
+    public function entries(){
+        return new \entries($this->config);
+    }
+
+    public function users(){
+        return new \Users($this->config);
+    }
 
 }
