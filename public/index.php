@@ -12,6 +12,9 @@ include "../src/controladors/home.php";
 include "../src/controladors/log.php";
 include "../src/controladors/login.php";
 include "../src/controladors/regist.php";
+include "../src/controladors/register.php";
+include "../src/controladors/perfil.php";
+include "../src/controladors/updateperfil.php";
 
 //include models
 include "../src/models/entries.php";
@@ -37,6 +40,14 @@ if($r == "") {//on an unexistent r sent to home page
   $resposta = ctrlLogin($peticio, $resposta, $contenidor);
 }elseif($r ==="regist"){
   $resposta = ctrlRegist($peticio, $resposta, $contenidor);
+}elseif($r ==="register"){
+  $resposta = ctrlRegister($peticio, $resposta, $contenidor);
+}elseif($r ==="perfil"){
+  $resposta = isAuth($peticio, $resposta, $contenidor,"ctrlPerfil");
+}elseif($r ==="updateperfil"){
+  $resposta = isAuth($peticio, $resposta, $contenidor,"ctrlUpdatePerfil");
 }
+//var_dump($resposta);
+//die;
 
 $resposta->resposta();

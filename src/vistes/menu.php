@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="perfil.php"><!--Aixo auria de ser index.php?r=perfil-->
+            <a class="nav-link" href="index.php?r=perfil"><!--Aixo auria de ser index.php?r=perfil-->
               <span data-feather="users" class="align-text-bottom"></span>
               Perfil
             </a>

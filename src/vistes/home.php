@@ -110,18 +110,18 @@
                 <tr>  
                   <td> <?php echo $entry['date_cita'] ?> </td>
                   <td> <?php echo $entry['tipo_cita'] ?> </td>
-                  <td> <?php echo $entry['nom'] ?> </td>
+                  <td> <?php echo $entry['estat'] ?> </td>
                   
                   <td> <a title="Exportar a l'Outlook" href="">
-                        <img width="30" src="../img/microsoft_office_outlook.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                        <img width="30" src="img/microsoft_office_outlook.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
                       </a><b> - </b> <a title="Exportar en PDF" href="">
-                        <img width="30" src="../img/pdf.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                        <img width="30" src="img/pdf.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
                       </a></td>
                   <td><a title="Exportar en PDF" href="">
-                        <img width="25" src="../img/pen.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                        <img width="25" src="img/pen.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
                       </a></td>
                   <td><a title="Exportar en PDF" href="">
-                        <img width="30" src="../img/bin.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
+                        <img width="30" src="img/bin.png" alt="Exportar a l'outlook" title="Exportar a l" class="exportarCalendariIcon">
                       </a></td>
                 </tr>
                 <?php } ?>
