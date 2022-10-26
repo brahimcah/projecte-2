@@ -1,0 +1,85 @@
+<div>
+    <h4 class="mb-3">Datos del ciudadano</h4>
+    <form class="needs-validation" novalidate action="reg.php" >
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="firstName" name="nombre" placeholder="Carmen" value="" required>
+          <div class="invalid-feedback">
+            Es obligatorio el nombre
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="lastName" name="apellidos" placeholder="Española Española" value="" required>
+          <div class="invalid-feedback">
+            Es obligatorio los Apellidos
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="username" class="form-label">DNI / NIE</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">-</span>
+            <input type="text" class="form-control" id="dni" name="doi" placeholder="9999999R" required>
+          <div class="invalid-feedback">
+              Campo Obligatorio
+            </div>
+          </div>
+        </div>
+
+      
+
+        <div class="col-12">
+          <label for="address" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="address" name="direccion" placeholder="Gran Via Jaume I, 41" required>
+          <div class="invalid-feedback">
+            Porfavor añada la Dirreción según la carta
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="address2" class="form-label">Observaciones <span class="text-muted">(Opcional)</span></label>
+          <input type="text" class="form-control" id="address2" name="observaciones" placeholder="-">
+        </div>
+
+     
+
+        
+
+      <div class="col-md-4">
+        <label for="state" class="form-label">Tractament</label>
+        <select class="form-select" id="state" name="municipio" required>
+          <option value="">Seleciona un categoria...</option>
+          <option>	Tall	</option>
+          <option>	Rentat </option>
+          <option>	Decoloració	</option>
+          <option>	Rentat + Tall	</option>
+          <option>	Decoloració	+  Tall </option>
+        </select>
+        <div class="invalid-feedback">
+          Seleciona alguna categoria
+        </div>
+      </div>
+
+      
+
+      <hr class="my-4">
+
+      <button class="w-100 btn btn-primary btn-lg" type="submit">Afegir Cita</button>
+      <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal" onclick="location.href='../'">Volver atras</button>
+
+    </form>
+  </div>
+</div>
+</main>
+
+</div>
+
+
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="form-validation.js"></script>
+</body>
+</html>
