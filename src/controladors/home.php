@@ -11,6 +11,8 @@ function ctrlHome($peticio, $resposta, $contenidor){
 
     $list = $entries->list($user["username"]);
 
+    
+
     //print_r($_SESSION);
     //print_r($user);
     //print_r($list);

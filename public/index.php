@@ -15,6 +15,7 @@ include "../src/controladors/regist.php";
 include "../src/controladors/register.php";
 include "../src/controladors/perfil.php";
 include "../src/controladors/updateperfil.php";
+include "../src/controladors/cancelentry.php";
 
 //include models
 include "../src/models/entries.php";
@@ -46,6 +47,8 @@ if($r == "") {//on an unexistent r sent to home page
   $resposta = isAuth($peticio, $resposta, $contenidor,"ctrlPerfil");
 }elseif($r ==="updateperfil"){
   $resposta = isAuth($peticio, $resposta, $contenidor,"ctrlUpdatePerfil");
+}elseif($r ==="cancel"){
+  $resposta = isAuth($peticio, $resposta, $contenidor,"ctrlCancelEntry");
 }
 //var_dump($resposta);
 //die;

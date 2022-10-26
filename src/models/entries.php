@@ -29,4 +29,15 @@ class entries
 
         return $entries;
     }
+    public function cancelEntry($identry)
+    {
+        $stm = $this->sql->prepare('UPDATE cites SET estat = 12 WHERE id=:id');
+        $stm->execute([':id' => $identry]);
+        
+        if ($stm->errorCode() !== '00000') {
+            $err = $stm->errorInfo();
+            $code = $stm->errorCode();
+            throw new Exception("Error.   {$err[0]} - {$err[1]}\n{$err[2]} $query");
+        }
+    }
 }

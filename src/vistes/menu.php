@@ -4,13 +4,13 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.php?r=login">
               <span data-feather="home" class="align-text-bottom"></span>
               Inici
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?wb=1">
+            <a class="nav-link" href="index.php?r=home">
               <span data-feather="file" class="align-text-bottom"></span>
               Consultar Cites
             </a>
