@@ -16,9 +16,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?wb=2">
+            <a class="nav-link" href="index.php?r=cita">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              
+              Crear Cita
             </a>
           </li>
           <li class="nav-item">
